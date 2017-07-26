@@ -35,7 +35,6 @@ app.get('/',(req, res)=>{
   res.render('home.hbs',{
     webPageName: 'Home',
     pageTitle: 'Home Express Page',
-    currentYear: new Date().getFullYear(),
     welcomePageMsg: 'Welcome to my test web page!'
   });
 });
@@ -43,8 +42,14 @@ app.get('/',(req, res)=>{
 app.get('/about',(req, res)=>{
   res.render('about.hbs',{
     webPageName: 'Express About',
-    pageTitle: 'About Page',
-    currentYear: new Date().getFullYear()
+    pageTitle: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res)=>{
+  res.render('projects.hbs', {
+    webPageName: 'Projects',
+    pageTitle: 'Git Projects Page'
   });
 });
 
